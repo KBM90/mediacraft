@@ -24,17 +24,35 @@
                     <span class="logo-icon">🎨</span>
                     <span class="logo-text">MediaCraft</span>
                 </a>
+
+                <!-- Language Dropdown -->
+                <div class="language-dropdown">
+                    <button class="language-btn" id="languageBtn" aria-label="Select language">
+                        <span class="current-lang" id="currentLang">🇬🇧 EN</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <ul class="language-menu" id="languageMenu">
+                        <li><button class="lang-option" data-lang="en">🇬🇧 English</button></li>
+                        <li><button class="lang-option" data-lang="fr">🇫🇷 Français</button></li>
+                        <li><button class="lang-option" data-lang="ar">🇸🇦 العربية</button></li>
+                        <li><button class="lang-option" data-lang="es">🇪🇸 Español</button></li>
+                        <li><button class="lang-option" data-lang="de">🇩🇪 Deutsch</button></li>
+                    </ul>
+                </div>
+
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#voiceover" class="nav-link">Voice-Over</a></li>
-                    <li><a href="#booking" class="nav-link btn-primary">Book Now</a></li>
+                    <li><a href="#home" class="nav-link active" data-lang="nav-home">Home</a></li>
+                    <li><a href="#services" class="nav-link" data-lang="nav-services">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link" data-lang="nav-portfolio">Portfolio</a></li>
+                    <li><a href="#voiceover" class="nav-link" data-lang="nav-voiceover">Voice-Over</a></li>
+                    <li><a href="#booking" class="nav-link btn-primary" data-lang="nav-booking">Book Now</a></li>
                 </ul>
             </div>
         </div>
@@ -46,17 +64,18 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="title-line">Digital Solutions.</span>
-                    <span class="title-line">Creative Storytelling.</span>
-                    <span class="title-line gradient-text">Real Impact.</span>
+                    <span class="title-line" data-lang="hero-line1">Digital Solutions.</span>
+                    <span class="title-line" data-lang="hero-line2">Creative Storytelling.</span>
+                    <span class="title-line gradient-text" data-lang="hero-line3">Real Impact.</span>
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-lang="hero-subtitle">
                     We craft impactful websites, engaging social media content, high-quality photography,
                     and professional voice-over services that tell your story and connect you with your audience.
                 </p>
                 <div class="hero-cta">
-                    <a href="#booking" class="btn btn-primary btn-large">Start Your Project</a>
-                    <a href="#portfolio" class="btn btn-secondary btn-large">View Our Work</a>
+                    <a href="#booking" class="btn btn-primary btn-large" data-lang="hero-cta-start">Start Your
+                        Project</a>
+                    <a href="#portfolio" class="btn btn-secondary btn-large" data-lang="hero-cta-view">View Our Work</a>
                 </div>
             </div>
         </div>
@@ -73,64 +92,65 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Comprehensive digital solutions to elevate your brand</p>
+                <h2 class="section-title" data-lang="services-title">Our Services</h2>
+                <p class="section-subtitle" data-lang="services-subtitle">Comprehensive digital solutions to elevate
+                    your brand</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-animate>
                     <div class="service-icon">🌐</div>
-                    <h3 class="service-title">Web Design & Development</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-lang="service1-title">Web Design & Development</h3>
+                    <p class="service-description" data-lang="service1-desc">
                         Custom, responsive websites that captivate your audience and drive conversions.
                         From landing pages to full e-commerce solutions.
                     </p>
                     <ul class="service-features">
-                        <li>Responsive Design</li>
-                        <li>SEO Optimized</li>
-                        <li>Fast Performance</li>
-                        <li>Custom Solutions</li>
+                        <li data-lang="service1-feat1">Responsive Design</li>
+                        <li data-lang="service1-feat2">SEO Optimized</li>
+                        <li data-lang="service1-feat3">Fast Performance</li>
+                        <li data-lang="service1-feat4">Custom Solutions</li>
                     </ul>
                 </div>
                 <div class="service-card" data-animate>
                     <div class="service-icon">📱</div>
-                    <h3 class="service-title">Social Media Content</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-lang="service2-title">Social Media Content</h3>
+                    <p class="service-description" data-lang="service2-desc">
                         Engaging content that builds your brand presence and connects with your target audience
                         across all social platforms.
                     </p>
                     <ul class="service-features">
-                        <li>Content Strategy</li>
-                        <li>Visual Design</li>
-                        <li>Copywriting</li>
-                        <li>Brand Consistency</li>
+                        <li data-lang="service2-feat1">Content Strategy</li>
+                        <li data-lang="service2-feat2">Visual Design</li>
+                        <li data-lang="service2-feat3">Copywriting</li>
+                        <li data-lang="service2-feat4">Brand Consistency</li>
                     </ul>
                 </div>
                 <div class="service-card" data-animate>
                     <div class="service-icon">📸</div>
-                    <h3 class="service-title">Professional Photography</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-lang="service3-title">Professional Photography</h3>
+                    <p class="service-description" data-lang="service3-desc">
                         High-quality photography that showcases your products, services, and brand story
                         in the best light.
                     </p>
                     <ul class="service-features">
-                        <li>Product Photography</li>
-                        <li>Brand Photography</li>
-                        <li>Event Coverage</li>
-                        <li>Professional Editing</li>
+                        <li data-lang="service3-feat1">Product Photography</li>
+                        <li data-lang="service3-feat2">Brand Photography</li>
+                        <li data-lang="service3-feat3">Event Coverage</li>
+                        <li data-lang="service3-feat4">Professional Editing</li>
                     </ul>
                 </div>
                 <div class="service-card" data-animate>
                     <div class="service-icon">🎙️</div>
-                    <h3 class="service-title">Voice-Over Services</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-lang="service4-title">Voice-Over Services</h3>
+                    <p class="service-description" data-lang="service4-desc">
                         Professional voice-over talent for commercials, explainer videos, podcasts,
                         and multimedia projects.
                     </p>
                     <ul class="service-features">
-                        <li>Multiple Languages</li>
-                        <li>Studio Quality</li>
-                        <li>Fast Turnaround</li>
-                        <li>Script Consultation</li>
+                        <li data-lang="service4-feat1">Multiple Languages</li>
+                        <li data-lang="service4-feat2">Studio Quality</li>
+                        <li data-lang="service4-feat3">Fast Turnaround</li>
+                        <li data-lang="service4-feat4">Script Consultation</li>
                     </ul>
                 </div>
             </div>
@@ -141,8 +161,8 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Portfolio</h2>
-                <p class="section-subtitle">Explore our recent web design projects</p>
+                <h2 class="section-title" data-lang="portfolio-title">Our Portfolio</h2>
+                <p class="section-subtitle" data-lang="portfolio-subtitle">Explore our recent web design projects</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-animate>
@@ -202,8 +222,9 @@
     <section class="voiceover" id="voiceover">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Voice-Over Showcase</h2>
-                <p class="section-subtitle">Listen to our professional voice-over work</p>
+                <h2 class="section-title" data-lang="voiceover-title">Voice-Over Showcase</h2>
+                <p class="section-subtitle" data-lang="voiceover-subtitle">Listen to our professional voice-over work
+                </p>
             </div>
             <div class="voiceover-grid">
                 <div class="voiceover-item" data-animate>
@@ -248,13 +269,13 @@
     <section class="booking" id="booking">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Book a Service</h2>
-                <p class="section-subtitle">Let's bring your vision to life</p>
+                <h2 class="section-title" data-lang="booking-title">Book a Service</h2>
+                <p class="section-subtitle" data-lang="booking-subtitle">Let's bring your vision to life</p>
             </div>
             <div class="booking-content">
                 <form class="booking-form" id="bookingForm">
                     <div class="form-group">
-                        <label class="form-label">Services Needed *</label>
+                        <label class="form-label" data-lang="form-services-label">Services Needed *</label>
                         <div class="checkbox-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" name="services" value="Web Design & Development"
@@ -285,9 +306,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="businessCategory" class="form-label">Business Category *</label>
+                        <label for="businessCategory" class="form-label" data-lang="form-category-label">Business
+                            Category *</label>
                         <select id="businessCategory" name="businessCategory" class="form-select" required>
-                            <option value="">Select your business category</option>
+                            <option value="" data-lang="form-category-placeholder">Select your business category
+                            </option>
                             <option value="Restaurant & Food">Restaurant & Food</option>
                             <option value="Retail & E-commerce">Retail & E-commerce</option>
                             <option value="Health & Wellness">Health & Wellness</option>
@@ -304,14 +327,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="phoneNumber" class="form-label">Phone Number *</label>
+                        <label for="phoneNumber" class="form-label" data-lang="form-phone-label">Phone Number *</label>
                         <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input"
                             placeholder="+212 6XX XXX XXX" required>
                         <span class="form-error" id="phoneError"></span>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-large btn-submit" id="submitBtn">
-                        <span class="btn-text">Send to WhatsApp</span>
+                        <span class="btn-text" data-lang="form-submit">Send to WhatsApp</span>
                         <span class="btn-icon">💬</span>
                     </button>
                 </form>
@@ -319,18 +342,18 @@
                 <div class="booking-info">
                     <div class="info-card">
                         <div class="info-icon">⚡</div>
-                        <h3 class="info-title">Quick Response</h3>
-                        <p class="info-text">We'll get back to you within 24 hours</p>
+                        <h3 class="info-title" data-lang="info1-title">Quick Response</h3>
+                        <p class="info-text" data-lang="info1-text">We'll get back to you within 24 hours</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">💼</div>
-                        <h3 class="info-title">Free Consultation</h3>
-                        <p class="info-text">Discuss your project with our experts</p>
+                        <h3 class="info-title" data-lang="info2-title">Free Consultation</h3>
+                        <p class="info-text" data-lang="info2-text">Discuss your project with our experts</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">🎯</div>
-                        <h3 class="info-title">Tailored Solutions</h3>
-                        <p class="info-text">Custom strategies for your business</p>
+                        <h3 class="info-title" data-lang="info3-title">Tailored Solutions</h3>
+                        <p class="info-text" data-lang="info3-text">Custom strategies for your business</p>
                     </div>
                 </div>
             </div>
@@ -346,7 +369,8 @@
                         <span class="logo-icon">🎨</span>
                         <span class="logo-text">MediaCraft</span>
                     </div>
-                    <p class="footer-tagline">Digital solutions. Creative storytelling. Real impact.</p>
+                    <p class="footer-tagline" data-lang="footer-tagline">Digital solutions. Creative storytelling. Real
+                        impact.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
