@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaCraft - Creative Digital Marketing Agency | Web Design, Social Media & Voice-Over</title>
+    <meta name="description"
+        content="MediaCraft is a creative digital marketing agency specializing in impactful websites, engaging social media content, professional photography, and voice-over services. Transform your brand with our digital solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">🎨</span>
+                    <span class="logo-text">MediaCraft</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#voiceover" class="nav-link">Voice-Over</a></li>
+                    <li><a href="#booking" class="nav-link btn-primary">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Digital Solutions.</span>
+                    <span class="title-line">Creative Storytelling.</span>
+                    <span class="title-line gradient-text">Real Impact.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    We craft impactful websites, engaging social media content, high-quality photography,
+                    and professional voice-over services that tell your story and connect you with your audience.
+                </p>
+                <div class="hero-cta">
+                    <a href="#booking" class="btn btn-primary btn-large">Start Your Project</a>
+                    <a href="#portfolio" class="btn btn-secondary btn-large">View Our Work</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5v14M19 12l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive digital solutions to elevate your brand</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-animate>
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Web Design & Development</h3>
+                    <p class="service-description">
+                        Custom, responsive websites that captivate your audience and drive conversions.
+                        From landing pages to full e-commerce solutions.
+                    </p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>SEO Optimized</li>
+                        <li>Fast Performance</li>
+                        <li>Custom Solutions</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate>
+                    <div class="service-icon">📱</div>
+                    <h3 class="service-title">Social Media Content</h3>
+                    <p class="service-description">
+                        Engaging content that builds your brand presence and connects with your target audience
+                        across all social platforms.
+                    </p>
+                    <ul class="service-features">
+                        <li>Content Strategy</li>
+                        <li>Visual Design</li>
+                        <li>Copywriting</li>
+                        <li>Brand Consistency</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate>
+                    <div class="service-icon">📸</div>
+                    <h3 class="service-title">Professional Photography</h3>
+                    <p class="service-description">
+                        High-quality photography that showcases your products, services, and brand story
+                        in the best light.
+                    </p>
+                    <ul class="service-features">
+                        <li>Product Photography</li>
+                        <li>Brand Photography</li>
+                        <li>Event Coverage</li>
+                        <li>Professional Editing</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate>
+                    <div class="service-icon">🎙️</div>
+                    <h3 class="service-title">Voice-Over Services</h3>
+                    <p class="service-description">
+                        Professional voice-over talent for commercials, explainer videos, podcasts,
+                        and multimedia projects.
+                    </p>
+                    <ul class="service-features">
+                        <li>Multiple Languages</li>
+                        <li>Studio Quality</li>
+                        <li>Fast Turnaround</li>
+                        <li>Script Consultation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Portfolio</h2>
+                <p class="section-subtitle">Explore our recent web design projects</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-animate>
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/restaurant_night_mode/"
+                            title="Restaurant Night Mode Website" loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Restaurant Night Mode</h3>
+                            <p class="portfolio-description">Modern restaurant website with elegant dark theme</p>
+                            <a href="https://kbm90.github.io/restaurant_night_mode/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/spaexample/" title="Spa Website Example" loading="lazy"
+                            class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Luxury Spa Experience</h3>
+                            <p class="portfolio-description">Serene and sophisticated spa website design</p>
+                            <a href="https://kbm90.github.io/spaexample/" target="_blank" class="btn btn-primary">View
+                                Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate>
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/smallfishclub/" title="Small Fish Club Website"
+                            loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Small Fish Club</h3>
+                            <p class="portfolio-description">Vibrant and engaging club website</p>
+                            <a href="https://kbm90.github.io/smallfishclub/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice-Over Section -->
+    <section class="voiceover" id="voiceover">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Voice-Over Showcase</h2>
+                <p class="section-subtitle">Listen to our professional voice-over work</p>
+            </div>
+            <div class="voiceover-grid">
+                <div class="voiceover-item" data-animate>
+                    <div class="video-container">
+                        <video controls class="voiceover-video" poster="">
+                            <source src="assets/videos/voiceover-sample-1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="voiceover-title">Commercial Voice-Over</h3>
+                    <p class="voiceover-description">Professional commercial narration with engaging tone</p>
+                </div>
+                <div class="voiceover-item" data-animate>
+                    <div class="video-container">
+                        <video controls class="voiceover-video" poster="">
+                            <source src="assets/videos/voiceover-sample-2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="voiceover-title">Explainer Video</h3>
+                    <p class="voiceover-description">Clear and articulate narration for educational content</p>
+                </div>
+                <div class="voiceover-item" data-animate>
+                    <div class="video-container">
+                        <video controls class="voiceover-video" poster="">
+                            <source src="assets/videos/voiceover-sample-3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3 class="voiceover-title">Podcast Intro</h3>
+                    <p class="voiceover-description">Dynamic and energetic podcast introduction</p>
+                </div>
+            </div>
+            <div class="voiceover-note">
+                <p>📝 <strong>Note:</strong> Please provide your voice-over video files to display actual examples.
+                    Place them in the <code>assets/videos/</code> folder.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book a Service</h2>
+                <p class="section-subtitle">Let's bring your vision to life</p>
+            </div>
+            <div class="booking-content">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label class="form-label">Services Needed *</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="Web Design & Development"
+                                    class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Web Design & Development</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="Social Media Content"
+                                    class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Social Media Content</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="Professional Photography"
+                                    class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Professional Photography</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="Voice-Over Services"
+                                    class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Voice-Over Services</span>
+                            </label>
+                        </div>
+                        <span class="form-error" id="servicesError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="businessCategory" class="form-label">Business Category *</label>
+                        <select id="businessCategory" name="businessCategory" class="form-select" required>
+                            <option value="">Select your business category</option>
+                            <option value="Restaurant & Food">Restaurant & Food</option>
+                            <option value="Retail & E-commerce">Retail & E-commerce</option>
+                            <option value="Health & Wellness">Health & Wellness</option>
+                            <option value="Beauty & Spa">Beauty & Spa</option>
+                            <option value="Real Estate">Real Estate</option>
+                            <option value="Technology & Software">Technology & Software</option>
+                            <option value="Education & Training">Education & Training</option>
+                            <option value="Entertainment & Events">Entertainment & Events</option>
+                            <option value="Professional Services">Professional Services</option>
+                            <option value="Non-Profit">Non-Profit</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="form-error" id="categoryError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber" class="form-label">Phone Number *</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input"
+                            placeholder="+212 6XX XXX XXX" required>
+                        <span class="form-error" id="phoneError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large btn-submit" id="submitBtn">
+                        <span class="btn-text">Send to WhatsApp</span>
+                        <span class="btn-icon">💬</span>
+                    </button>
+                </form>
+
+                <div class="booking-info">
+                    <div class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <h3 class="info-title">Quick Response</h3>
+                        <p class="info-text">We'll get back to you within 24 hours</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💼</div>
+                        <h3 class="info-title">Free Consultation</h3>
+                        <p class="info-text">Discuss your project with our experts</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🎯</div>
+                        <h3 class="info-title">Tailored Solutions</h3>
+                        <p class="info-text">Custom strategies for your business</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🎨</span>
+                        <span class="logo-text">MediaCraft</span>
+                    </div>
+                    <p class="footer-tagline">Digital solutions. Creative storytelling. Real impact.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Services</h4>
+                        <ul class="footer-list">
+                            <li><a href="#services">Web Design</a></li>
+                            <li><a href="#services">Social Media</a></li>
+                            <li><a href="#services">Photography</a></li>
+                            <li><a href="#services">Voice-Over</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Company</h4>
+                        <ul class="footer-list">
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#booking">Book Now</a></li>
+                            <li><a href="#home">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Contact</h4>
+                        <ul class="footer-list">
+                            <li><a href="https://wa.me/00212634864854" target="_blank">WhatsApp</a></li>
+                            <li>+212 634 864 854</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediaCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
