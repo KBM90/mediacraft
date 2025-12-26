@@ -368,10 +368,21 @@ function initLanguageDropdown() {
     const languageMenu = document.getElementById('languageMenu');
     const langOptions = document.querySelectorAll('.lang-option');
 
+    // Safety check
+    if (!languageBtn || !languageMenu) {
+        console.warn('Language dropdown elements not found');
+        return;
+    }
+
     // Toggle dropdown
     languageBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
+        const isActive = languageMenu.classList.contains('active');
         languageMenu.classList.toggle('active');
+
+        // Force reflow for Brave browser
+        void languageMenu.offsetWidth;
     });
 
     // Close dropdown when clicking outside
@@ -381,12 +392,23 @@ function initLanguageDropdown() {
         }
     });
 
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && languageMenu.classList.contains('active')) {
+            languageMenu.classList.remove('active');
+        }
+    });
+
     // Language selection
     langOptions.forEach(option => {
-        option.addEventListener('click', () => {
+        option.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             const selectedLang = option.getAttribute('data-lang');
-            setLanguage(selectedLang);
-            languageMenu.classList.remove('active');
+            if (selectedLang) {
+                setLanguage(selectedLang);
+                languageMenu.classList.remove('active');
+            }
         });
     });
 }

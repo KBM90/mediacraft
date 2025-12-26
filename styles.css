@@ -199,9 +199,11 @@ a {
 .language-dropdown {
     position: relative;
     margin: 0 var(--spacing-md);
+    z-index: 1001;
 }
 
 .language-btn {
+    position: relative;
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
@@ -215,6 +217,7 @@ a {
     font-size: 0.9rem;
     font-weight: 500;
     transition: all var(--transition-fast);
+    z-index: 1002;
 }
 
 .language-btn:hover {
@@ -240,9 +243,10 @@ a {
     position: absolute;
     top: calc(100% + 0.5rem);
     right: 0;
+    background: #0a0a0f;
     background: rgba(10, 10, 15, 0.98);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-md);
     padding: 0.5rem;
@@ -250,15 +254,17 @@ a {
     min-width: 150px;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transform: translateY(-10px);
     transition: all var(--transition-normal);
-    box-shadow: var(--shadow-lg);
-    z-index: 100;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
 }
 
 .language-menu.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
 }
 
