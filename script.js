@@ -152,7 +152,7 @@ function initBookingForm() {
             const message = createWhatsAppMessage(formData);
 
             // Open WhatsApp
-            const whatsappNumber = '00212634864854';
+            const whatsappNumber = '212634864854';
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
             // Show loading state
