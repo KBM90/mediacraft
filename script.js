@@ -592,6 +592,11 @@ function initBookingForm() {
     const form = document.getElementById('bookingForm');
     const submitBtn = document.getElementById('submitBtn');
 
+    // Return early if booking form doesn't exist (e.g., on portfolio page)
+    if (!form || !submitBtn) {
+        return;
+    }
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
