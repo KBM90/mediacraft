@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - MediaCraft | Our Web Design Projects</title>
+    <meta name="description"
+        content="Explore MediaCraft's portfolio of stunning web design projects across various industries including restaurants, healthcare, real estate, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html#home" class="logo">
+                    <span class="logo-icon">🎨</span>
+                    <span class="logo-text">MediaCraft</span>
+                </a>
+
+                <!-- Language Dropdown -->
+                <div class="language-dropdown">
+                    <button class="language-btn" id="languageBtn" aria-label="Select language">
+                        <span class="current-lang" id="currentLang">🇬🇧 EN</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <ul class="language-menu" id="languageMenu">
+                        <li><button class="lang-option" data-lang="en">🇬🇧 English</button></li>
+                        <li><button class="lang-option" data-lang="fr">🇫🇷 Français</button></li>
+                        <li><button class="lang-option" data-lang="ar">🇸🇦 العربية</button></li>
+                        <li><button class="lang-option" data-lang="es">🇪🇸 Español</button></li>
+                        <li><button class="lang-option" data-lang="de">🇩🇪 Deutsch</button></li>
+                    </ul>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#home" class="nav-link" data-lang="nav-home">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link" data-lang="nav-services">Services</a></li>
+                    <li><a href="index.html#portfolio" class="nav-link active" data-lang="nav-portfolio">Portfolio</a>
+                    </li>
+                    <li><a href="index.html#voiceover" class="nav-link" data-lang="nav-voiceover">Voice-Over</a></li>
+                    <li><a href="index.html#booking" class="nav-link btn-primary" data-lang="nav-booking">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Page Header -->
+    <section class="portfolio-page-header">
+        <div class="container">
+            <h1 class="page-title" data-lang="portfolio-page-title">Our Portfolio</h1>
+            <p class="page-subtitle" data-lang="portfolio-page-subtitle">Explore our complete collection of web design
+                projects</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter Section -->
+    <section class="portfolio-full" id="portfolioFull">
+        <div class="container">
+            <div class="portfolio-filter-container">
+                <label for="categoryFilter" class="filter-label" data-lang="filter-label">Filter by Category:</label>
+                <select id="categoryFilter" class="category-filter">
+                    <option value="all" data-lang="filter-all">All Categories</option>
+                    <option value="Restaurant & Food" data-lang="filter-restaurant">Restaurant & Food</option>
+                    <option value="Beauty & Spa" data-lang="filter-beauty">Beauty & Spa</option>
+                    <option value="Entertainment & Events" data-lang="filter-entertainment">Entertainment & Events
+                    </option>
+                    <option value="Real Estate" data-lang="filter-realestate">Real Estate</option>
+                    <option value="Health & Wellness" data-lang="filter-health">Health & Wellness</option>
+                </select>
+            </div>
+
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-item" data-animate data-category="Restaurant & Food">
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/restaurant_night_mode/"
+                            title="Restaurant Night Mode Website" loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Restaurant Night Mode</h3>
+                            <p class="portfolio-description">Modern restaurant website with elegant dark theme</p>
+                            <p class="portfolio-category">Restaurant & Food</p>
+                            <a href="https://kbm90.github.io/restaurant_night_mode/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate data-category="Beauty & Spa">
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/spaexample/" title="Spa Website Example" loading="lazy"
+                            class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Luxury Spa Experience</h3>
+                            <p class="portfolio-description">Serene and sophisticated spa website design</p>
+                            <p class="portfolio-category">Beauty & Spa</p>
+                            <a href="https://kbm90.github.io/spaexample/" target="_blank" class="btn btn-primary">View
+                                Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate data-category="Entertainment & Events">
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/smallfishclub/" title="Small Fish Club Website"
+                            loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Small Fish Club</h3>
+                            <p class="portfolio-description">Vibrant and engaging club website</p>
+                            <p class="portfolio-category">Entertainment & Events</p>
+                            <a href="https://kbm90.github.io/smallfishclub/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate data-category="Real Estate">
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/realestate_example_001/" title="Real Estate Website"
+                            loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Real Estate</h3>
+                            <p class="portfolio-description">Professional and engaging real estate website</p>
+                            <p class="portfolio-category">Real Estate</p>
+                            <a href="https://kbm90.github.io/realestate_example_001/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate data-category="Health & Wellness">
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/dental_office_001/" title="Dental Office Website"
+                            loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Dental Office</h3>
+                            <p class="portfolio-description">Professional and engaging dental office website</p>
+                            <p class="portfolio-category">Health & Wellness</p>
+                            <a href="https://kbm90.github.io/dental_office_001/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate data-category="Health & Wellness">
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/dental_office_002/" title="Dental Office Website"
+                            loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Dental Office</h3>
+                            <p class="portfolio-description">Professional and engaging dental office website</p>
+                            <p class="portfolio-category">Health & Wellness</p>
+                            <a href="https://kbm90.github.io/dental_office_002/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-animate data-category="Restaurant & Food">
+                    <div class="portfolio-preview">
+                        <iframe src="https://kbm90.github.io/restaurant_example_001/index.html"
+                            title="Restaurant Website" loading="lazy" class="portfolio-iframe"></iframe>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Restaurant</h3>
+                            <p class="portfolio-description">Professional and engaging restaurant website</p>
+                            <p class="portfolio-category">Restaurant & Food</p>
+                            <a href="https://kbm90.github.io/restaurant_example_001/" target="_blank"
+                                class="btn btn-primary">View Live Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🎨</span>
+                        <span class="logo-text">MediaCraft</span>
+                    </div>
+                    <p class="footer-tagline" data-lang="footer-tagline">Digital solutions. Creative storytelling. Real
+                        impact.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Services</h4>
+                        <ul class="footer-list">
+                            <li><a href="index.html#services">Web Design</a></li>
+                            <li><a href="index.html#services">Social Media</a></li>
+                            <li><a href="index.html#services">Photography</a></li>
+                            <li><a href="index.html#services">Voice-Over</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Company</h4>
+                        <ul class="footer-list">
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="index.html#booking">Book Now</a></li>
+                            <li><a href="index.html#home">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Contact</h4>
+                        <ul class="footer-list">
+                            <li><a href="https://wa.me/00212634864854" target="_blank">WhatsApp</a></li>
+                            <li>+212 634 864 854</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediaCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

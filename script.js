@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initBookingForm();
     initMobileMenu();
     initLanguageDropdown();
+    initPortfolioFilter();
 });
 
 // === Language System ===
@@ -54,6 +55,16 @@ const translations = {
         'service4-feat4': 'Script Consultation',
         'portfolio-title': 'Our Portfolio',
         'portfolio-subtitle': 'Explore our recent web design projects',
+        'portfolio-see-all': 'See All Projects',
+        'portfolio-page-title': 'Our Portfolio',
+        'portfolio-page-subtitle': 'Explore our complete collection of web design projects',
+        'filter-label': 'Filter by Category:',
+        'filter-all': 'All Categories',
+        'filter-restaurant': 'Restaurant & Food',
+        'filter-beauty': 'Beauty & Spa',
+        'filter-entertainment': 'Entertainment & Events',
+        'filter-realestate': 'Real Estate',
+        'filter-health': 'Health & Wellness',
         'voiceover-title': 'Voice-Over Showcase',
         'voiceover-subtitle': 'Listen to our professional voice-over work',
         'booking-title': 'Book a Service',
@@ -111,6 +122,16 @@ const translations = {
         'service4-feat4': 'Consultation de Script',
         'portfolio-title': 'Notre Portfolio',
         'portfolio-subtitle': 'Découvrez nos récents projets de conception web',
+        'portfolio-see-all': 'Voir Tous les Projets',
+        'portfolio-page-title': 'Notre Portfolio',
+        'portfolio-page-subtitle': 'Explorez notre collection complète de projets de conception web',
+        'filter-label': 'Filtrer par Catégorie:',
+        'filter-all': 'Toutes les Catégories',
+        'filter-restaurant': 'Restaurant & Alimentation',
+        'filter-beauty': 'Beauté & Spa',
+        'filter-entertainment': 'Divertissement & Événements',
+        'filter-realestate': 'Immobilier',
+        'filter-health': 'Santé & Bien-être',
         'voiceover-title': 'Vitrine Voix-Off',
         'voiceover-subtitle': 'Écoutez notre travail professionnel de voix-off',
         'booking-title': 'Réserver un Service',
@@ -168,6 +189,16 @@ const translations = {
         'service4-feat4': 'استشارة النصوص',
         'portfolio-title': 'معرض أعمالنا',
         'portfolio-subtitle': 'استكشف مشاريع تصميم الويب الأخيرة',
+        'portfolio-see-all': 'عرض جميع المشاريع',
+        'portfolio-page-title': 'معرض أعمالنا',
+        'portfolio-page-subtitle': 'استكشف مجموعتنا الكاملة من مشاريع تصميم الويب',
+        'filter-label': 'تصفية حسب الفئة:',
+        'filter-all': 'جميع الفئات',
+        'filter-restaurant': 'مطاعم وأطعمة',
+        'filter-beauty': 'تجميل وسبا',
+        'filter-entertainment': 'ترفيه وفعاليات',
+        'filter-realestate': 'عقارات',
+        'filter-health': 'صحة وعافية',
         'voiceover-title': 'عرض التعليق الصوتي',
         'voiceover-subtitle': 'استمع إلى أعمالنا الاحترافية في التعليق الصوتي',
         'booking-title': 'احجز خدمة',
@@ -225,6 +256,16 @@ const translations = {
         'service4-feat4': 'Consultoría de Guiones',
         'portfolio-title': 'Nuestro Portafolio',
         'portfolio-subtitle': 'Explora nuestros proyectos recientes de diseño web',
+        'portfolio-see-all': 'Ver Todos los Proyectos',
+        'portfolio-page-title': 'Nuestro Portafolio',
+        'portfolio-page-subtitle': 'Explora nuestra colección completa de proyectos de diseño web',
+        'filter-label': 'Filtrar por Categoría:',
+        'filter-all': 'Todas las Categorías',
+        'filter-restaurant': 'Restaurante y Comida',
+        'filter-beauty': 'Belleza y Spa',
+        'filter-entertainment': 'Entretenimiento y Eventos',
+        'filter-realestate': 'Bienes Raíces',
+        'filter-health': 'Salud y Bienestar',
         'voiceover-title': 'Muestra de Locución',
         'voiceover-subtitle': 'Escucha nuestro trabajo profesional de locución',
         'booking-title': 'Reservar un Servicio',
@@ -282,6 +323,16 @@ const translations = {
         'service4-feat4': 'Skript-Beratung',
         'portfolio-title': 'Unser Portfolio',
         'portfolio-subtitle': 'Entdecken Sie unsere neuesten Webdesign-Projekte',
+        'portfolio-see-all': 'Alle Projekte Ansehen',
+        'portfolio-page-title': 'Unser Portfolio',
+        'portfolio-page-subtitle': 'Entdecken Sie unsere vollständige Sammlung von Webdesign-Projekten',
+        'filter-label': 'Nach Kategorie Filtern:',
+        'filter-all': 'Alle Kategorien',
+        'filter-restaurant': 'Restaurant & Essen',
+        'filter-beauty': 'Schönheit & Spa',
+        'filter-entertainment': 'Unterhaltung & Events',
+        'filter-realestate': 'Immobilien',
+        'filter-health': 'Gesundheit & Wellness',
         'voiceover-title': 'Sprachaufnahme-Showcase',
         'voiceover-subtitle': 'Hören Sie unsere professionellen Sprachaufnahmen',
         'booking-title': 'Service Buchen',
@@ -729,4 +780,41 @@ if (!('scrollBehavior' in document.documentElement.style)) {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js';
     document.head.appendChild(script);
+}
+
+// === Portfolio Filter ===
+function initPortfolioFilter() {
+    const categoryFilter = document.getElementById('categoryFilter');
+    const portfolioGrid = document.getElementById('portfolioGrid');
+
+    // Only run on portfolio page
+    if (!categoryFilter || !portfolioGrid) {
+        return;
+    }
+
+    categoryFilter.addEventListener('change', (e) => {
+        const selectedCategory = e.target.value;
+        const portfolioItems = portfolioGrid.querySelectorAll('.portfolio-item');
+
+        portfolioItems.forEach((item, index) => {
+            const itemCategory = item.getAttribute('data-category');
+
+            // Add fade-out animation
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.95)';
+
+            setTimeout(() => {
+                if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+                    item.style.display = 'block';
+                    // Fade in with stagger
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, index * 50);
+                } else {
+                    item.style.display = 'none';
+                }
+            }, 300);
+        });
+    });
 }
